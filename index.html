@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Localstoragemanager by hefler</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Localstoragemanager</h1>
+        <p>A simple wrapper for the localStorage browser API.</p>
+
+        <p class="view"><a href="https://github.com/hefler/LocalStorageManager">View the Project on GitHub <small>hefler/LocalStorageManager</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/hefler/LocalStorageManager/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/hefler/LocalStorageManager/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/hefler/LocalStorageManager">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="localstoragemanager" class="anchor" href="#localstoragemanager"><span class="octicon octicon-link"></span></a>LocalStorageManager</h1>
+
+<p>A simple wrapper for the localStorage browser API.</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Just add your CSS file into the <code>head</code> and test how your CSS will affect HTML elements.</p>
+
+<pre><code>/** Create a new instance of LocalStorageManager
+*   @param keyName  A string for the key
+*   @param data     The value of the key (an string or object)
+*   @param version  [optional] This is a parameter to test against a previous local saved version of the same key. So if the version is different than the local we overwrite it.
+*/
+var lsm = new LocalStorageManager(keyName, data, [version]); 
+
+/**
+*   Write to save data to localStorage (note: this is no merge, everything will be overwritten).
+*   @paran data The value of the key (an string or object)
+*   @param keyName [optional] If no name is provided the value provided in the constructor will be used.
+*/
+lsm.write(data, keyName);
+
+/**
+*   Deletes the key from localStorage.
+*   @param keyName [optional] If no name is provided the value provided in the constructor will be used and flushed.
+*   @return Returns true if the key was found and deleted.
+*/
+lsm.flush(keyName);
+/**
+*   Write to save data to localStorage (note: this is no merge, everything will be overwritten).
+*   @param keyName [optional] If no name is provided the value provided in the constructor will be used.
+*   @return Returns the key as an &lt;code&gt;object&lt;/code&gt;.
+*/
+lsm.getObject(keyName);
+</code></pre>
+
+<h2>
+<a name="betaish" class="anchor" href="#betaish"><span class="octicon octicon-link"></span></a>Beta…ish</h2>
+
+<p>This is a working in progress and for sure there are improvements to be made.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/hefler">hefler</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
