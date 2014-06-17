@@ -5,8 +5,6 @@ A simple wrapper for the localStorage browser API.
 
 ## Usage ##
 
-Just add your CSS file into the <code>head</code> and test how your CSS will affect HTML elements.
-
 	/** Create a new instance of LocalStorageManager
 	*	@param keyName	A string for the key
 	*	@param data		The value of the key (an string or object)

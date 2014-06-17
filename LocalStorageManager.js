@@ -15,7 +15,9 @@
 		_lsm = this;
 		var lsmObject = _lsm.getObject(keyName);
 		this.localKeyName = keyName;
-		if(lsmObject === null || (lsmObject !== null && "version" in lsmObject && version !== lsmObject.version))
+		if(	lsmObject === null ||
+			(lsmObject !== null && version !== undefined && ("version" in lsmObject) && version !== lsmObject.version) ||
+			(lsmObject !== null && ("version" in data) && data.version !== lsmObject.version))
 		{
 			//set/reset local settings
 			this.write(data, keyName);
