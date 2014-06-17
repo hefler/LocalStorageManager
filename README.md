@@ -31,6 +31,9 @@ A simple wrapper for the localStorage browser API.
 	*	@return Returns the key as an <code>object</code>.
 	*/
 	lsm.getObject(keyName);
+### What's up with <code>version</code> param/property?
+The idea of having a <code>version</code> property in your <code>data</code> object is to make it overwrite a similar object saved in the client browser avoiding an outdated object f\*@k around with your code.
+So if the <code>keyName</code> parameter matches a key in the <code>localStorage</code> it will overwrite that mofo. If you put anything as the <code>version</code> it tries to compare with the <code>version</code> property (_if existent_) in the <code>localStorage</code>.
 
 ## Beta…ish ##
  
