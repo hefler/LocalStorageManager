@@ -29,7 +29,6 @@
 		}
 	};
 	_proto = LocalStorageManager.prototype;
-	_proto.objectVersion = 0;
 	_proto.initialKey = undefined;
 	_proto.localKeyName = undefined;
 	_proto.flush = function(keyName)
